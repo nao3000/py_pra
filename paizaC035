@@ -1,0 +1,18 @@
+N = int(input())
+pass_person = 0
+
+for i in range(N):
+    t_i,e_i,m_i,s_i,j_i,g_i = input().rstrip().split(' ')
+    m = (int(e_i) + int(m_i) + int(s_i) + int(j_i) + int(g_i))
+
+    if 1 <= N <= 1000 and 0 <= i <= 100 and t_i == 'l' or 's':
+        if m >= 350:
+            if t_i == 'l':
+                if int(j_i) + int(g_i) >= 160:
+                    pass_person += 1
+
+            else:
+                if int(m_i) + int(s_i) >= 160:
+                    pass_person += 1
+
+print(pass_person)
