@@ -1,0 +1,26 @@
+n = int(input())
+a = 0
+b = 0
+c = 0
+
+for i in range(n):
+    s = input().split()
+    
+    if s[0] == "SET":
+        if s[1] == "1":
+            a = int(s[2])
+            
+        elif s[1] == "2":
+            b = int(s[2])
+            
+        else:
+            pass
+    
+    elif s[0] == "ADD":
+        c = a
+        b = c + int(s[1])
+        
+    elif s[0] == "SUB":
+        c = a
+        b = c - int(s[1])
+print(a,b)
