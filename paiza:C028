@@ -1,0 +1,18 @@
+N = int(input())
+words = [input().split() for x in range(N)] #出力[q_1,a_1][q_2,a_2]....
+score = 0
+
+for word in words:
+    if len(word[0]) == len(word[1]):
+        miss = 0 #missは毎回０になる必要がある
+        for i in range(len(word[0])):#文字の長さだけ繰り返される(if文で文字列の数が違うものは省いているので差異を気にする必要はない)
+            if (word[0])[i] != (word[1])[i]:#リストにしている単語を1文字ずつ(i)比べる
+                miss += 1
+        
+        if miss < 1:
+            score += 2
+            
+        elif miss < 2:
+            score += 1
+            
+print(score)
