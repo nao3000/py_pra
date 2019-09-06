@@ -1,0 +1,16 @@
+import sympy
+Q = int(input())
+
+for i in range(Q):
+    N_i = int(input())
+    M = sympy.divisors(N_i) #約数をリスト化
+    div_sum = (sum(M) - N_i)#MにはN_iそのものも含まれるので引いておく
+    
+    if div_sum == N_i:
+        print("perfect")
+        
+    elif div_sum - N_i == +-1:
+        print("nearly")
+        
+    else:
+        print("neither")
