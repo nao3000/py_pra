@@ -1,0 +1,18 @@
+N,K,P = input().split()
+N,K,P = int(N),int(K),int(P)
+Z = 0
+
+try:
+    s_i = input().split()
+    s_i.sort() #アルファベットじ順に並び替え
+except EOFError:
+    print()
+
+def split_list(l, n): 
+    
+    for idx in range(0, len(l), n):
+        yield l[idx:idx + n]
+ 
+result = list(split_list(s_i,K))
+for i in result[P-1]:
+    print(i)
