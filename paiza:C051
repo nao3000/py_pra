@@ -1,0 +1,7 @@
+a,b,c,d = input().split()
+a,b,c,d = int(a),int(b),int(c),int(d)
+
+if 1<= a and b and c and d <= 9:
+    num_list = [a,b,c,d]
+    num_list.sort()#数字を昇順でリスト化 #前半2つを1の位 #後半2つを10の位
+    print((num_list[3] * 10 + num_list[1]) + (num_list[2] * 10 + num_list[0])) #10の位になる数字は10をかける
