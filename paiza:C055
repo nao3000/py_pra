@@ -1,0 +1,16 @@
+N = int(input())
+G = input()
+count = 0
+
+if 1 <= N <= 100 and 1 <= len(G) <= 100:
+    for i in range(N):
+        s_i = input()
+        if 1 <= len(s_i) <= 100:
+            if G not in s_i:
+                pass
+            else:
+                print(s_i)
+                count += 1
+                
+if count < 1:
+    print("None")
