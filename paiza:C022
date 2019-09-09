@@ -1,0 +1,26 @@
+N = int(input())#s_i は始値、e_i は終値、h_i は高値、l_i は安値を表しています。
+ans_list = []
+h_list = []#高値
+l_list = []#安値
+
+if 1 <= N <= 1000:
+    for i in range(N):
+        s_i,e_i,h_i,l_i = input().split()
+        s_i,e_i,h_i,l_i = int(s_i),int(e_i),int(h_i),int(l_i)
+        
+        if i == 0:
+            ans_list.append(s_i)#始値
+            
+        elif i == N-1:
+            ans_list.append(e_i)#終値
+            
+        else:
+            pass
+        
+        h_list.append(h_i)#高値を一度全てリストに
+        l_list.append(l_i)#安値を一度全てリストに
+
+ans_list.append(max(h_list))#リストにした高値から最も高いものをans_listに
+ans_list.append(min(l_list))#リストにした安値から最も低いものをans_listに
+
+print(*ans_list)
